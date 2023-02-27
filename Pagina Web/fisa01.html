@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="UTF-8">
+
+  <title> Șiruri de caractere (C++) </title>
+
+<header>
+
+<style>
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  
+}
+
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: 
+inherit;
+  margin: 0;
+}
+
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: purple;
+}
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+z-index: 1;
+}
+
+
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<body style = "background-color:bisque;">
+
+
+<div class="navbar">
+
+  <a href="proiectv2.html">Acasă</a>
+  <a href="quiz.html">Verifică-ți cunoștințele!</a>
+  <a href="contact.html">Contact</a>
+
+  
+
+  </div>
+ 
+</div>
+
+<br/>
+<br/>
+<hr/>
+
+<h1>
+<b>Șiruri de caractere în limbajul C++</b>
+</h1>
+
+<hr/>
+
+</br>
+
+
+
+<h2><big><big>Declararea, citirea și scrierea șirurilor</big></big></h2>
+
+</br>
+ 
+
+
+<p1><div style="text-indent:1cm;"><big>Pentru a utiliza datele provenite dintr-un șir de caractere în cadrul unui program, este necesar ca acesta să fie declarat și citit, pentru ca mai apoi 
+să poată fi prelucrat. De altfel, în cazul în care se cere, acesta poate fi afișat înainte sau după prelucrare.
+</big></div></p1>
+
+
+
+
+<p2>
+<div style="text-indent:1cm;">
+<big>În continuare vom aborda noțiunile de declarare, citire și scriere a unui șir de caractere și pașii necesari realizării acestora: 
+</big></div></p2>
+
+
+<section>
+
+</br><big>
+<p3><big><big><b>1. Declararea șirului de caractere<big></b></big></big></p3></big>
+
+</br>
+</br>
+<p4><div style="text-indent:1cm;">Pentru declararea unui șir de caractere se folosește tipul de date <span style="color: purple">char</span>, acesta 
+fiind un tip întreg, permițând, așadar, memorarea valorilor întregi. La afișarea unei date de acest tip nu se va afișa numarul pe care îl memoreaza ci 
+caracterul care are codul ASCII egal cu acel numar. Operația de citire a unei date de acest tip este similară.</p4>
+
+</br>
+<p5><div style="text-indent:1cm;">Un șir de caractere se declară astfel:</p5></br>
+</br>
+<p6><div style="text-indent:2cm;"><span style="color: purple">char</span> s[21];</div></p6>
+</br>
+<p7><div style="text-indent:1cm;">sau
+</p7>
+</br>
+<p8><div style="text-indent:2cm;">
+<span style="color: purple">char</span> *s;</div></p8>
+</br>
+<p9><div style="text-indent:1cm;">Prin scrierea anterioara s-a declarat un șir care poate memora maxim 21 de caractere. Dintre acestea, doar 20 pot fi 
+<span style="color: purple">caractere utile</span>, dupa ultimul caracter util fiind memorat caracterul  <span style="color: purple">'\0'</span>. </p9>
+<p10><div style="text-indent:1cm;">De asemenea, la declarare, un șir de caractere poate fi inițializat, dupa exemplul:</p10>
+</br>
+
+<p11><div style="text-indent:2cm;"><span style="color: purple">char</span> s[21] = <span style="color: blue">"soare"</span>; // În cazul acesta, 
+sunt memorate doar 5 caractere utile, fiind un total de 6 caractere cu '\0'.</p11>
+</br>
+
+<p11><div style="text-indent:2cm;"><span style="color: purple">char</span> s[ ] = <span style="color: blue">"soare"</span>; // Se alocă automat 6 
+octeți pentru șirul s.</p11>
+</br>
+</br>
+
+</section>
+
+<section>
+<big>
+<p12><big><big><b>2. Citirea unui șir de caractere</b></big></big><p12>
+
+</br>
+</br>
+<p13><div style="text-indent:1cm;">În funcție de conținutul șirului, există două modalități în care acesta poate fi citit:</p13>
+</br>
+
+</br>
+
+<ul>
+<li><div style="text-indent:1cm;">Dacă șirul nu conține spații, atunci se folosește:</li>
+</br>
+</br>
+<img width="200" height="100" src="https://pbs.twimg.com/media/Ez7PRfsWQAIsns6?format=png&name=360x360">
+</br>
+</br>
+<li><div style="text-indent:1cm;">Daca șirul conține spații, atunci se folosește:</li>
+</br>
+</br>
+<img width="900" height="100" src="https://pbs.twimg.com/media/Ez7PYiCXMAY2aNi?format=jpg&name=medium">
+</br>
+</br>
+<p14><div style="text-indent:1cm;">Citirea se încheie fie la întâlnirea lui Enter, fie când au fost citite n-1 caractere.</p14>
+</br>
+
+</ul>
+</big>
+</section>
+<section>
+<big>
+<p15><big><big><b>3. Afișarea unui șir de caractere</b></big></big></p15>
+</br>
+</br>
+<p16><div style="text-indent:1cm;"> Afișarea unui șir de caractere se poate face cu operatorul de inserție din stream, conform exemplului:</p16>
+</br>
+</br>
+<div style="text-indent:1cm;"><img width="160" height="60" src="https://pbs.twimg.com/media/E0xoYn9XoAIHpvf?format=png&name=360x360"></div>
+</br>
+</br>
+<p17><div style="text-indent:1cm;"> O altă variantă este folosirea manipulatorului <span style="color: purple">endl</span> pentru a întrerupe linia.  
+</p17>
+</br>
+</br>
+<div style="text-indent:1cm;"><img width="240" height="50" src="https://pbs.twimg.com/media/E0xoa99X0AEaAO1?format=png&name=small"></div>
+</br>
+</br>
+</br>
+
+</section>

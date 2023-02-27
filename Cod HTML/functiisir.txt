@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title> Siruri de caractere (C++) </title>
+<header>
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: purple;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+<body style = "background-color:bisque;">
+
+<div class="navbar">
+  <a href="proiectv2.html">Acasă</a>
+  <a href="quiz.html">Verifică-ți cunoștințele!</a>
+  <a href="contact.html">Contact</a>
+  
+</div>
+<br/><br/><hr/>
+<h1><b>Siruri de caractere in limbajul C++</b></h1>
+<hr/>
+</br>
+
+
+<h2><big>Funcții standard pentru prelucrarea șirurilor</big></h2>
+</br> 
+
+
+<p1><div style="text-indent:1.5cm;"><big>Pentru prelucrarea șirurilor de caractere, folosim mai multe funcții predefinite. Funcțiile prezentate mai jos se găsesc în biblioteca <i>string.h</i>.</big></div></p1>
+<section>
+
+</br>
+<big><big><b>1. STRLEN</b></big></big>
+</br>
+</br>
+<big>
+<p2><div style="text-indent:1.5cm;">Funcția STRLEN afișează lungimea efectivă a șirului de caractere. Lungimea efectivă a șirului este reprezentată de numărul de elemente ale șirului, neluându-se în considerare caracterul '\0'.</div></p2>
+</br>
+</section>
+<section>
+<div style="text-indent:1.5cm;">
+<u>Exemplu:</u>       
+</br>
+<table style="width:100%">
+  <tr>
+    <td><div style="text-indent:1.5cm;">char s[100], int n;</td>
+  
+  </tr></div>
+  <tr>
+    <td><div style="text-indent:1.5cm;">n=strlen(s); //n va primi valoarea 100</td>
+   </div>
+  </tr>
+
+</table>
+</br>
+<p2><div style="text-indent:1.5cm;">Șirul vid este șirul care are dimensiunea egală cu 0 (conține doar '\0'). </p2>
+</big>
+</br>
+</br>
+<big><big><b>2. STRCPY</b></big></big>
+</br>
+</br>
+<big>
+
+<p3><div style="text-indent:1.5cm;">Funcția STRCPY copiază şirul sursă in şirul destinaţie. Şirul destinaţie va fi suprascris. Funcţia asigură plasarea terminatorului de şir în şirul destinaţie după copiere. Funcţia returneaza şirul destinaţie.</div></p3>
+</div>
+
+</br>
+<div style="text-indent:1.5cm;">
+<u>Exemplu:</u>       
+</br>
+<table style="width:100%">
+  <tr>
+    <td><div style="text-indent:1.5cm;">strcpy(a, "abc"); // a este "abc"</td>
+  
+  </tr></div>
+  <tr>
+    <td><div style="text-indent:1.5cm;">strcpy(b, a); //b este "abc"</td>
+   </div>
+  </tr>
+
+</table>
+</big>
+</br>
+</br>
+<big><big><b>3. STRNCPY</b></big></big>
+</br>
+</br>
+<big>
+
+<p4><div style="text-indent:1.5cm;">Funcția STRNCPY se aseamănă cu STRNCPY, dar în loc de a fi copiată toată sursa sunt copiate doar primele n caractere.</div></p4>
+</div>
+</br>
+<div style="text-indent:1.5cm;">
+
+<u>Exemplu:</u>       
+</br>
+<table style="width:100%">
+  <tr>
+    <td><div style="text-indent:1.5cm;">strcpy(a, "abcde"); // a este "abc"</td>
+  
+  </tr></div>
+  <tr>
+    <td><div style="text-indent:1.5cm;">strncpy(b, a, 3); </td>
+   </div>
+  </tr>
+ <tr>
+    <td><div style="text-indent:1.5cm;">b[3]='\0';</td>
+  
+  </tr></div>
+ <tr>
+    <td><div style="text-indent:1.5cm;">// b este "abc"</td>
+  
+  </tr></div>
+
+</table>
+</big>
+
+</br>
+</br>
+<big><big><b>4. STRCMP</b></big></big>
+</br>
+</br>
+<big>
+
+<p5><div style="text-indent:1.5cm;">Funcția STRCMP compară două șiruri, verificându-le caracter cu caracter. Valoarea returnată este 0 dacă cele două şiruri sunt identice, mai mare decât 0 dacă primul șir este “mai mare” (alfabetic) decât al doilea şi mai mică decât 0 altfel. În situația în care șirurile au lungimi diferite, ultima comparație se face între '\0' și caracterul de pe aceeași poziție din șirul mai lung.</div></p5>
+</div>
+</br>
+
+<div style="text-indent:1.5cm;">
+
+<u>Exemplu:</u>       
+</br>
+<table style="width:100%">
+  <tr>
+    <td><div style="text-indent:1.5cm;">strcpy(a, "abcd"); // a este "abc"</td>
+  
+  </tr></div>
+  <tr>
+    <td><div style="text-indent:1.5cm;">strcpy(b, "abde"); </td>
+   </div>
+  </tr>
+ <tr>
+    <td><div style="text-indent:1.5cm;">strcmp(a, b); //valoarea returnată va fi mai mică decât 0, deoarece a este mai mic decât b </td>
+  
+  </tr></div>
+ 
+</table>
+</big>
+</br>
+</br>
+<big><big><b>5. STRCHR</b></big></big>
+</br>
+</br>
+<big>
+
+<p6><div style="text-indent:1.5cm;">Funcția STRCHR caută un caracter într-un șir. Dacă respectivul caracter se găsește în șir, atunci funcția returnează subșirul care începe cu prima apariție a caracterului căutat. Altfel, funcția returnează 0 (adresă nulă).</div></p6>
+</div>
+</br>
+
+<div style="text-indent:1.5cm;">
+
+<u>Exemplu:</u>       
+</br>
+<table style="width:100%">
+  <tr>
+    <td><div style="text-indent:1.5cm;">char s[128] = "Calul sare azi";</td>
+  
+  </tr></div>
+  <tr>
+    <td><div style="text-indent:1.5cm;">char *p = strchr(s, 'u') ;</td>
+   </div>
+  </tr>
+ <tr>
+    <td><div style="text-indent:1.5cm;"> //p este "ul sare azi" </td>
+  
+  </tr></div>
+ 
+</table>
+</big>
+</br>
+</br>
+<big><big><b>6. STRTOK</b></big></big>
+</br>
+</br>
+<big>
+
+<p7><div style="text-indent:1.5cm;">Funcția STRTOK are rolul de a împarţi şirul dat în tokens (subşiruri separate de orice caracter aflat în lista de delimitatori), prin apelarea ei succesivă.</div></p7>
+</div>
+</br>
+
+<div style="text-indent:1.5cm;">
+
+<u>Exemplu:</u>       
+</br>
+<table style="width:100%">
+  <tr>
+    <td><div style="text-indent:1.5cm;">char sep[]=" ;:,.", *p, s[256];//sep este șirul separatorilor, p este cuvântul curent</td>
+  
+  </tr></div>
+  <tr>
+    <td><div style="text-indent:1.5cm;">p = strtok(s, sep) ;</td>
+   </div>
+  </tr>
+ <tr>
+    <td><div style="text-indent:1.5cm;">while(p!=0){</td>
+  
+  </tr></div>
+ <tr>
+    <td><div style="text-indent:1.5cm;">prelucrare p;</td>
+  
+  </tr></div>
+<tr>
+    <td><div style="text-indent:1.5cm;">p = strtok(NULL, sep);}</td>
+  
+  </tr></div>
+
+</table>
+</big>
+</br>
+</br>
+<big><big><b>7. STRCAT</b></big></big>
+</br>
+</br>
+<big>
+
+<p8><div style="text-indent:1.5cm;">Funcția STRCAT realizează concatenarea a două șiruri.</div></p8>
+</div>
+</br>
+<div style="text-indent:1.5cm;">
+
+<u>Exemplu:</u>       
+</br>
+<table style="width:100%">
+  <tr>
+    <td><div style="text-indent:1.5cm;">strcpy(a, "abc");</td>
+  
+  </tr></div>
+  <tr>
+    <td><div style="text-indent:1.5cm;">strcpy(b, "xyzt");</td>
+   </div>
+  </tr>
+ <tr>
+    <td><div style="text-indent:1.5cm;">strcat(a, b); //a este "abcxyzt"</td>
+  
+  </tr></div>
+ 
+</table>
+</big>
+</br>
+</br>
+<big><big><b>8. STRSTR</b></big></big>
+</br>
+</br>
+<big>
+
+<p9><div style="text-indent:1.5cm;">Funcția STRSTR verifică dacă al doilea șir s2 este un subșir al primului șir s1. Dacă da, funcția returnează subșirul lui s1 care începe cu prima apariție a lui s2. Dacă nu, returnează 0.</div></p9>
+</div>
+</br>
+<div style="text-indent:1.5cm;">
+
+<u>Exemplu:</u>       
+</br>
+<table style="width:100%">
+  <tr>
+    <td><div style="text-indent:1.5cm;">strcpy(s1, "abcbcdbcy");</td>
+  
+  </tr></div>
+  <tr>
+    <td><div style="text-indent:1.5cm;">strcpy(s2, "bc");</td>
+   </div>
+  </tr>
+ <tr>
+    <td><div style="text-indent:1.5cm;">strstr(s1, s2); //funcția returnează "bcbcdbcy"</td>
+  
+  </tr></div>
+ 
+</table>
+</big>
+</br>
+</br>
+
+
+
+
+</body>
+</html>
